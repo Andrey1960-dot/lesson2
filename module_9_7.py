@@ -5,7 +5,7 @@ def is_prime(func):
         for i in range(1, total + 1):
             if total % i == 0:
                 n += 1
-        if n != 0:
+        if n == 2:
             print('Простое')
         else:
             print('Составное')
