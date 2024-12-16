@@ -17,7 +17,7 @@ write_words(200, 'example3.txt')
 write_words(100, 'example4.txt')
 end_time = time.time()
 ttl_time = end_time - start_time
-print(f'Время выполнения функций: {ttl_time} секунд')
+print(f'Время выполнения функций: {ttl_time:.6f} секунд')
 
 start_time2 = time.time()
 thread_1 = Thread(target=write_words, args=(10, 'example5.txt'))
@@ -36,9 +36,9 @@ thread_3.join()
 thread_4.join()
 end_time2 = time.time()
 ttl_time2 = end_time2 - start_time2
-print(f'Время выполнения потоков: {ttl_time2} секунд')
+print(f'Время выполнения потоков: {ttl_time2:.6f} секунд')
 
-print(f'Время выполнения потоков быстрее времени выполнения функций на:{ttl_time - ttl_time2} секунд')
+print(f'Время выполнения потоков быстрее времени выполнения функций на:{ttl_time - ttl_time2:.6f} секунд')
 
 
 
